@@ -1,0 +1,24 @@
+<h1>Edit Student Information</h1>
+
+<form action="/students/<%= @student_info.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <label for="first-name">First name:</label>
+  <input type="text" id="first-name" name="first_name" placeholder="First name" value="<%= @student_info.first_name %>">
+
+  <label for="last-name">Last name:</label>
+  <input type="text" id="last-name" name="last_name" placeholder="Last name" value="<%= @student_info.last_name %>">
+
+  <label for="age">Age:</label>
+  <input type="number" id="age" min="1" name="age" value="<%= @student_info.age %>">
+
+  <label for="students">Select a house:</label>
+  <select id="students" name="house">
+    <option value="Gryffindor">Gryffindor</option>
+    <option value="Slytherin">Slytherin</option>
+    <option value="Ravenclaw">Ravenclaw</option>
+    <option value="Hufflepuff">Hufflepuff</option>
+  </select>
+
+  <input type="submit" value="Edit Student">
+</form>

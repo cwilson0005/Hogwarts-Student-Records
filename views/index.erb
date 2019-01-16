@@ -1,0 +1,7 @@
+<h1>All Students</h1>
+
+<ul>
+  <% for student in @students %>
+    <li> Name: <a href="/students/<%= student.id %>"><%= student.pretty_name %></a> | <%= student.house %> | Age: <%= student.age %> - <a href="/students/<%= student.id %>/edit">Edit Student Information</a></li>
+  <% end %>
+</ul>

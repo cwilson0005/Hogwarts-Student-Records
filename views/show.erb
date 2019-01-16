@@ -1,0 +1,8 @@
+<h1>Here is the student you were looking for!</h1>
+
+<p> Name: <%= @student.pretty_name %> | House: <%= @student.house %> | Age: <%= @student.age %> </p>
+
+<form action="/students/<%= @student.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Student">
+</form>
